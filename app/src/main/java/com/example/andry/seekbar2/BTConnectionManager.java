@@ -41,7 +41,7 @@ class BTConnectionManager {
     private boolean connected = false;
     private final Handler mHandler;
     private static int RECIEVE_MESSAGE = 1;
-    public ConnectedThread mConnectedThread;
+    private ConnectedThread mConnectedThread;
 
     BTConnectionManager(Context context, String adress, Activity mainActivity, Handler handler) {
         this.context = context;
@@ -51,20 +51,12 @@ class BTConnectionManager {
         Log.d(MainActivity.TAG, "Менеджер BTConnectionManager получен");
     }
 
-//    public OutputStream getOutStream() {
-//        return outStream;
-//    }
-//
-//    public InputStream getInpStream() {
-//        return inpStream;
-//    }
-
-    public BluetoothAdapter getBluetoothAdapter() {
+    private BluetoothAdapter getBluetoothAdapter() {
         if (btAdapter == null) btAdapter = BluetoothAdapter.getDefaultAdapter();
         return btAdapter;
     }
 
-    public BluetoothSocket getBtSocket() {
+    private BluetoothSocket getBtSocket() {
         if (btSocket == null) {
             BluetoothDevice device = getBluetoothAdapter().getRemoteDevice(address);
 /// Socket!
@@ -97,7 +89,7 @@ class BTConnectionManager {
         return connected;
     }
 
-    public void setConnected(boolean connected) {
+    private void setConnected(boolean connected) {
         this.connected = connected;
 
     }

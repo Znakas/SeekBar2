@@ -47,14 +47,10 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
                 Log.d(MainActivity.TAG, "Хендлер получил сообщение в Активити: " + msg.toString());
 
                 switch (msg.what) {
-                    case RECEIVE_MESSAGE:                                                   // если приняли сообщение в Handler
+                    case RECEIVE_MESSAGE:                                     // если приняли сообщение в Handler
 //                      //распарсить сообщение
                         inpString = msg.obj.toString().trim();
-                        txt_data.setText("Ответ от Arduino: " + inpString);             // обновляем TextView
-//
-//                        if (inpString.length() > 6) {
-//                            String getString = inpString.substring(1);
-
+                        txt_data.setText("Ответ от Arduino: " + inpString);  // обновляем TextView
                         String splString[] = inpString.split(" ");
                         int hireA = 0;
                         int hireB = 0;
@@ -69,24 +65,6 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-//                            try {
-//                                hireB = Integer.parseInt(splString[1]);
-//                                Log.d(TAG, "...Строка hireB:" + hireB + "...");
-//                            } catch (Exception e){
-//                                e.printStackTrace();
-//                            }
-//                            try {
-//                                hireC = Integer.parseInt(splString[2]);
-//                                Log.d(TAG, "...Строка hireC:" + hireC + "...");
-//                            } catch (Exception e){
-//                                e.printStackTrace();
-//                            }
-//                            int hireB = Integer.parseInt(splString[1]);
-//                            Log.d(TAG, "...Строка hireB:" + hireB + "...");
-//
-//                            int hireC = Integer.parseInt(splString[2]);
-//                            Log.d(TAG, "...Строка hireC:" + hireC + "...");
-
                         setSeeksBarProgress(hireA, seekBarOver9500A, text_indicator9500A, true);
                         setSeeksBarProgress(hireB, seekBarOver9500B, text_indicator9500B, true);
                         setSeeksBarProgress(hireC, seekBarOver15, text_indicator15, false);

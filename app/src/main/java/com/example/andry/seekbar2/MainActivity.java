@@ -17,7 +17,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener, OnClickListener {
 
-
     private TextView txt_status, txt_data;
     private TextView text_indicator9500A, text_indicator9500B, text_indicator15;
     private Button btn_write, btn_read;
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     private int minStepOver9500A = 2000, minStepOver9500B = 2000, minStepOver15 = 0;
     private BTConnectionManager btManager;
     public Handler mHandler;
-    public String inpString;
+    private String inpString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

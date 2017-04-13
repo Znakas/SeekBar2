@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     private int maxStepOver9500A = 9500, maxStepOver9500B = 9500, maxStepOver15 = 15;
     private int minStepOver9500A = 2000, minStepOver9500B = 2000, minStepOver15 = 0;
     private BTConnectionManager btManager;
-    public Handler mHandler;
+    private Handler mHandler;
     private String inpString;
 
     @Override

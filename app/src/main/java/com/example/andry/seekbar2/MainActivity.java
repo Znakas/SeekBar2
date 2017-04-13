@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     public static final String TAG = "MyLog";
     //    private static final String MAC_ADRESS = "20:16:10:25:32:78";
     private static final String MAC_ADRESS = "94:53:30:03:18:2e"; // pc
-
     final int RECIEVE_MESSAGE = 1;
     private int stepOver9500A = 500, stepOver9500B = 500, stepOver15 = 1;
     private int maxStepOver9500A = 9500, maxStepOver9500B = 9500, maxStepOver15 = 15;

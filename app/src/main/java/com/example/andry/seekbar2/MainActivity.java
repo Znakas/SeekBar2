@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     public static final String TAG = "MyLog";
     //    private static final String MAC_ADRESS = "20:16:10:25:32:78";
     private static final String MAC_ADRESS = "94:53:30:03:18:2e"; // pc
-    final int RECIEVE_MESSAGE = 1;
+    final int RECEIVE_MESSAGE = 1;
     private int stepOver9500A = 500, stepOver9500B = 500, stepOver15 = 1;
     private int maxStepOver9500A = 9500, maxStepOver9500B = 9500, maxStepOver15 = 15;
     private int minStepOver9500A = 2000, minStepOver9500B = 2000, minStepOver15 = 0;
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
                 Log.d(MainActivity.TAG, "Хендлер получил сообщение в Активити: " + msg.toString());
 
                 switch (msg.what) {
-                    case RECIEVE_MESSAGE:                                                   // если приняли сообщение в Handler
+                    case RECEIVE_MESSAGE:                                                   // если приняли сообщение в Handler
 //                      //распарсить сообщение
                         inpString = msg.obj.toString().trim();
                         txt_data.setText("Ответ от Arduino: " + inpString);             // обновляем TextView
